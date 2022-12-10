@@ -32,7 +32,7 @@ app.get('/listing', (req, res) => {
   if (req.query.limit) {
     limit = req.query.limit;
   }
-  let offset = (page - 1) * 20;
+  let offset = (page - 1) * limit;
   let lastIndex = offset + limit;
 
   const token = '38e0a05020fd4fdf29430a851686d691dca9f957';
