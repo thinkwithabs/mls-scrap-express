@@ -2,7 +2,7 @@
   "name": "mls-scrap-express",
   "version": "1.0.0",
   "description": "This express application fetches data from mls grid and store them in local JSON database.",
-  "main": "server.js",
+  "main": "index.js",
   "author": "rifatptk",
   "license": "MIT",
   "engines": {
