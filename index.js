@@ -13,6 +13,16 @@ app.use(cors(corsOption));
 //if you want in every domain then
 app.use(cors());
 
+import path from 'path';
+
+export default function handler(req, res) {
+  const file = path.join(process.cwd(), 'files', 'listing.json');
+  const stringified = readFileSync(file, 'utf8');
+
+  res.setHeader('Content-Type', 'application/json'));
+  return res.end(stringified);
+}
+
 //morgan logger
 const morgan = require('morgan');
 app.use(morgan('tiny'));
