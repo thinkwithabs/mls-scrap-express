@@ -5,7 +5,7 @@
   ],
    {
   "functions": {
-    "/listing/listing.json": {
+    "/listing": {
       "includeFiles": "/**"
     }
   }
