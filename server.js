@@ -25,7 +25,7 @@ app.get('/health', (_req, res) => {
 //get all listings
 app.get('/listing', (req, res) => {
   let page = 1;
-  let limit = 20;
+  let limit = 100;
   if (req.query.page) {
     page = req.query.page;
   }
@@ -49,9 +49,12 @@ app.get('/listing', (req, res) => {
   } else {
     console.log('fetching data...');
     axios
-      .get(`https://api.mlsgrid.com/v2/Property?$expand=Media`, {
-        headers: { Authorization: `Bearer ${token}` },
-      })
+      .get(
+        `https://api.mlsgrid.com/v2/Property?$expand=Media%2CRooms%2CUnitTypes&$top=1000 `,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      )
       .then((response) => {
         data = JSON.stringify(response.data, null, 2);
         fs.writeFileSync('listing.json', data);
