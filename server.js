@@ -22,6 +22,10 @@ app.get('/health', (_req, res) => {
   res.status(200).json({ message: 'ok' });
 });
 
+app.get('/', (_req, res) => {
+  res.status(200).json({ message: 'ok' });
+});
+
 //get all listings
 app.get('/listing', (req, res) => {
   let page = 1;

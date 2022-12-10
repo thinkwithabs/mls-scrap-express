@@ -5,8 +5,11 @@
   "main": "server.js",
   "author": "rifatptk",
   "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "node server.js"
   },
   "dependencies": {
     "axios": "^1.2.1",
