@@ -3,11 +3,13 @@
   "builds": [
       { "src": "**/*.js", "use": "@now/node" }
   ],
-   "functions": {
-    "listing.json": {
-      "includeFiles": "listing.json"
+   {
+  "functions": {
+    "/listing/listing.json": {
+      "includeFiles": "/**"
     }
   }
+}
   "routes": [
     {
       "src": "/.*",
